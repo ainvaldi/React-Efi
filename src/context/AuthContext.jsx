@@ -39,6 +39,8 @@ export const AuthProvider = ({ children }) => {
             const data = await response.json()
             const jwtToken = data.access_token
 
+
+
             if (!jwtToken) return toast.error("No se recibio el token")
 
             localStorage.setItem('token', jwtToken)
